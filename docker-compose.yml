@@ -2,12 +2,12 @@ version: '2'
 services:
   mongodb:
     container_name: schools-datastore
-image: jfrog.io/com-test-oi:1.24.2-0f8b8f4
+image: jfrog.io/com-test-oi:1.0f8b8f4
     command: mongod --smallfiles
   web:
     container_name: schools-service
     build: build/libs
-image: jfrog.io/com-test-oi:1.24.2-0f8b8f4
+image: jfrog.io/com-test-oi:1.0f8b8f4
     depends_on: # schools-datastore will be started before the schools-service
       - mongodb
     ports:
