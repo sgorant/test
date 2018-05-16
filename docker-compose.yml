@@ -2,7 +2,7 @@ version: '2'
 services:
   mongodb:
     container_name: schools-datastore
-    image: jfrog.io/com-test-jfrog:$1
+    image: jfrog.io/com-test-jfrog:test
     command: mongod --smallfiles
   web:
     container_name: schools-service
